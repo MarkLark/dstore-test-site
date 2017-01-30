@@ -8,11 +8,11 @@ if __name__ == '__main__':
     with app.app_context():
         api.store.create_all()
 
-        Car( manufacturer = "Holden", make = "Commodore", year = 2005 ).add()
-        Car( manufacturer = "Holden", make = "Commodore", year = 2006 ).add()
-        Car( manufacturer = "Holden", make = "Commodore", year = 2007 ).add()
-        Car( manufacturer = "Holden", make = "Commodore", year = 2008 ).add()
-        Car( manufacturer = "Holden", make = "Commodore", year = 2009 ).add()
+        Car( make = "Holden", model = "Commodore", year = 2005 ).add()
+        Car( make = "Holden", model = "Commodore", year = 2006 ).add()
+        Car( make = "Holden", model = "Commodore", year = 2007 ).add()
+        Car( make = "Holden", model = "Commodore", year = 2008 ).add()
+        Car( make = "Holden", model = "Commodore", year = 2009 ).add()
 
     app.run( host = "0.0.0.0", port = 5000, debug = True, use_reloader = False )
 

@@ -7,8 +7,8 @@ class Car( Model ):
     _namespace = "cars.make"
     _vars = [
         var.RowID,
-        var.String( "manufacturer", 32, mods = [ mod.NotNull() ] ),
         var.String( "make", 32, mods = [ mod.NotNull() ] ),
+        var.String( "model", 32, mods = [ mod.NotNull() ] ),
         var.Number( "year", mods = [ mod.NotNull(), mod.Min( 1950 ), mod.Max( 2017 ) ] ),
     ]
     _acl_rules = dict(

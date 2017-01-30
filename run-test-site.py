@@ -14,7 +14,7 @@ if __name__ == '__main__':
         Car( manufacturer = "Holden", make = "Commodore", year = 2008 ).add()
         Car( manufacturer = "Holden", make = "Commodore", year = 2009 ).add()
 
-    app.run( host = "0.0.0.0", port = 6000, debug = True, use_reloader = False )
+    app.run( host = "0.0.0.0", port = 5000, debug = True, use_reloader = False )
 
     with app.app_context():
         api.store.destroy_all()

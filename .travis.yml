@@ -20,6 +20,5 @@ install:
 script:
   - python run-test-site-travis.py &
   - cd test_site/web
-  - npm run test-single-run
   - (npm start > /dev/null &) && (npm run protractor)
   - cd ../..

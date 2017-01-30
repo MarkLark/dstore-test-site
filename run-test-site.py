@@ -3,7 +3,7 @@
 if __name__ == '__main__':
     from test_site.app import create_app
     from test_site.models import Car
-    app, api = create_app( config = "tests.configs.server" )
+    app, api = create_app( config = "test_site.configs.server" )
 
     with app.app_context():
         api.store.create_all()

@@ -30,7 +30,8 @@ class VM( pyman.Page ):
             pyman.Actions.Cmd( "Open Coverage",    "google-chrome cover/index.html" ),
             pyman.Actions.Cmd( "PyTerm",           'ssh -t %s "cd ~/%s; python"' % ( self.host, self.dir ) ),
             pyman.Actions.Cmd( "Install Package",  'ssh -t %s "cd ~/%s; sudo python setup.py develop"' % ( self.host, self.dir ) ),
-            pyman.Actions.Cmd( "Add Mongo User",   'ssh -t %s "cd ~/%s/tests; python add_user.py' % ( self.host, self.dir ) ),
+            pyman.Actions.Cmd( "Run Test Server",  'ssh -t %s "cd ~/%s; ./run-test-server.py"' % (self.host, self.dir)),
+            pyman.Actions.Cmd( "Run Test Site",    'ssh -t %s "cd ~/%s; ./run-test-site.py"' % (self.host, self.dir)),
             pyman.Actions.Back()
         ])
 

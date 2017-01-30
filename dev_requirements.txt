@@ -1,6 +1,5 @@
 nose
 coverage
 dstore
-dstore-mongo
 dstore-acl
 flask-dstore

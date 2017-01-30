@@ -18,9 +18,8 @@ install:
   - cd test_site/web && npm install && cd ../..
 
 script:
-  - python run-test-site.py & export APP_PID=$!
+  - python run-test-site.py &
   - cd test_site/web
   - npm run test-single-run
   - (npm start > /dev/null &) && (npm run protractor)
   - cd ../..
-  - kill -11 $APP_PID
